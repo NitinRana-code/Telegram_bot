@@ -6,7 +6,7 @@ import openai
 import telepot
 from Cred import tokens 
 key = tokens.TOKEN_OPENAI
-openai.api_key = os.getenv(key)
+openai.api_key = key
 
 token = tokens.TOKEN_TELGERAM
 
