@@ -2,11 +2,12 @@ from telegram.ext.updater import Updater
 from telegram.ext import ConversationHandler,CommandHandler,RegexHandler 
 import openai
 import telepot
-from Cred import tokens 
-key = tokens.TOKEN_OPENAI
-openai.api_key = key
+# from Cred import tokens 
+import os
+key = "API_KEY"
+openai.api_key = os.getenv(key)
 
-token = tokens.TOKEN_TELGERAM
+token = os.getenv("BOT_TOKEN")
 bot = telepot.Bot(token)  
 
 updater = Updater(token, use_context=True  )
